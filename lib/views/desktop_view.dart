@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:new_project/models/home_model.dart';
 import 'package:new_project/widgets/body_tail.dart';
 import 'package:new_project/widgets/default_form_field.dart';
 import 'package:new_project/widgets/social_center.dart';
 import 'package:new_project/widgets/subscribe_field.dart';
 
 class DesktopView extends StatelessWidget {
-
+int index=0;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,7 +22,8 @@ class DesktopView extends StatelessWidget {
                 Container(
                   width: 450,
                   child: Text(
-                    ' THIS IS TEXT This' * 3,
+                  homeList[index].title*3,
+                    // ' THIS IS TEXT This' * 3,
                     style: GoogleFonts.openSansCondensed(
                         fontSize: 45, color: Colors.white),
                     maxLines: 2,
